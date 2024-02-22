@@ -92,7 +92,7 @@ li:last-child {
   color: red;
 }
 
-h4 {
+h5 {
   color: red;
   width: 70%; /* Ancho del 80% del contenedor padre */
   text-align: center;
@@ -151,10 +151,25 @@ h3 {
   width: 100%; /* Asegurar que ocupe el 100% del contenedor */
   max-width: 280px; /* Limitar el ancho máximo */
 }
-
+.container-section {
+  display: flex;
+}
+.container-ol {
+  width: 49%;
+}
 .important-note {
   display: flex;
   justify-content: center;
+}
+
+.pay-method {
+  display: flex;
+  align-items: center;
+}
+
+.pay-method img,
+.titulo {
+  margin-right: 15px;
 }
 
 /* Consulta de medios para pantallas más pequeñas */
@@ -162,6 +177,20 @@ h3 {
   #numeros,
   #nombre,
   #btnEnviar {
-    max-width: 100%; /* Hacer que ocupen el 100% del contenedor en pantallas más pequeñas */
+    max-width: 95%; /* Hacer que ocupen el 100% del contenedor en pantallas más pequeñas */
+  }
+
+  .container-ol {
+    width: 100%;
+  }
+  .pay-method,
+  .container-section {
+    display: block;
+  }
+  .pay-method img,
+  p,
+  .titulo {
+    text-align: center;
+    margin-bottom: 15px;
   }
 }

@@ -7,40 +7,57 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Rifa Web</h1>
-    <h2>¡Gana 10 milones de pesos en efectivo!</h2>
-    <h2>
-      ¿Despues de carnavales quedaste con los bolsillos pelados y el colegio de
-      tus hijos te remató?
-    </h2>
+    <h2>Rifa Web</h2>
+    <h1>¡Gana 10 millones de pesos en efectivo!</h1>
+
     <p>
       Esta es tu oportunidad para darte un respiro y recuperar esa platica que
-      se te escapó en ron y en útiles escolares.
+      se te escapó.
     </p>
-    <span>Instrucciones de como jugar:</span>
-    <ol>
-      <li>
-        debes seleccionar uno de los botones disponibles de color verde (solo
-        seleccionar uno, luego llenar la demas informacion y enviarla).
-      </li>
-      <li>
-        Donde dice agregar cifras adicionales, debes agregar una cifra de 2
-        digitos, si agregas mas, solo se tendrán en cuenta las dos primeras
-        (agrega las 2 cifras que quieras).
-      </li>
-      <li>
-        En el campo nombre, debes agregar tu nombre completo, ¡verifica que sea
-        tu nombre completo para evitar confusiones!
-      </li>
-      <li>
-        Dale al botón enviar informacion y automaticamente estarás participando
-        por el premio.
-      </li>
-      <li>
-        ¡Muy importante! Solo jugarán los números que sean cancelados 3 días
-        antes de la fecha limite.
-      </li>
-    </ol>
+    <div class="container-section">
+      <div class="container-ol">
+        <span>Instrucciones como participar:</span>
+        <ol>
+          <li>
+            Selecciona un número de 2 ciras en la lista de cuadros verdes (solo
+            seleccionar uno a la vez).
+          </li>
+          <li>
+            En la casilla donde dice agregar dos numeros adicionales, debes
+            agregar un numeos de 2 dígitos, para completar una cifra de 4
+            numeros, si agregas más solo se tendrá en cuenta los dos primeros.
+          </li>
+          <li>
+            En el campo nombre, debes agregar tu nombre completo, ¡verifica que
+            sea tu nombre completo para evitar confusiones!
+          </li>
+          <li>
+            Dale al botón guardar información y automaticamente estarás
+            participando por el premio.
+          </li>
+          <li>
+            ¡Muy importante! Solo jugarán los números que sean cancelados 3 días
+            antes de la fecha limite.
+          </li>
+        </ol>
+      </div>
+
+      <div class="pay-method">
+        <span class="titulo">Metodos de pago:</span>
+  
+        <!-- Agrega un evento onclick a cada elemento que contiene la información de pago -->
+        <div class="pay-info" onclick="copiarAlPortapapeles('12055587050')">
+          <img src="/img/bancolombia.png" alt="bancolombia" height="50px" />
+          <p>Ahorros: 12055587050</p>
+        </div>
+  
+        <div class="pay-info" onclick="copiarAlPortapapeles('3143769778')">
+          <img src="/img/nequi.png" alt="Nequi" height="50px" />
+          <p>Nequi: 3143769778</p>
+        </div>
+
+      </div>
+      <div id="mensaje-copiado" style="display: none; background-color: #4CAF50; color: white; padding: 10px; position: fixed; top: 10px; left: 50%; transform: translateX(-50%); border-radius: 5px; z-index: 1000;"></div>
 
     <h3>
       La Rifa jugará con la loteria del
@@ -51,12 +68,10 @@
     <h2 class="valor">Valor Rifa: $10.000</h2>
 
     <div class="important-note">
-      <h4>
-        Nota importante: por favor no elijas mas de un número antes de completar
-        todos los campos y posteriormente enviarlos, si seleccionas dos números
-        antes de enviar toda la información, solo se tendrá en cuenta el ultimo
-        y el primer numero se eliminrá sacandolo de la rifa.
-      </h4>
+      <h5>
+        Nota importante: Si seleccionas dos botones verdes, el primero se
+        eliminará y se tendrá en cuenta el último.
+      </h5>
     </div>
 
     <h3>Números Disponibles:</h3>

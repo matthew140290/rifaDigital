@@ -203,3 +203,41 @@ function mostrarHistorial(participantes, historialDiv) {
     });
   }
 }
+
+function copiarAlPortapapeles(texto) {
+  // Crear un campo de texto temporal fuera del área visible
+  const inputTemp = document.createElement("textarea");
+  inputTemp.value = texto;
+
+  // Asegurarse de que el campo de texto sea visible
+  inputTemp.style.position = "fixed";
+  inputTemp.style.left = "-9999px";
+  inputTemp.style.top = "0";
+
+  // Agregar el campo de texto al DOM
+  document.body.appendChild(inputTemp);
+
+  // Seleccionar el texto dentro del campo de texto
+  inputTemp.select();
+  inputTemp.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+  try {
+    // Intentar copiar el texto al portapapeles utilizando el API del Portapapeles
+    navigator.clipboard.writeText(texto).then(() => {
+      // Mostrar el mensaje de copiado
+      const mensajeCopiado = document.getElementById("mensaje-copiado");
+      mensajeCopiado.innerHTML = `Texto copiado: ${texto}`;
+      mensajeCopiado.style.display = "block";
+
+      // Ocultar el mensaje después de un tiempo (ej. 2 segundos)
+      setTimeout(() => {
+        mensajeCopiado.style.display = "none";
+      }, 2000);
+    });
+  } catch (err) {
+    console.error("Error al intentar copiar al portapapeles:", err);
+  } finally {
+    // Eliminar el campo de texto temporal del DOM
+    document.body.removeChild(inputTemp);
+  }
+}
