@@ -25,7 +25,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(path.join(__dirname, "public", "index.html")));
+app.use(express.static(path.join(__dirname, "public")));
 
 let db;
 
