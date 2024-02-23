@@ -10,16 +10,12 @@
     <h2>Rifa Web</h2>
     <h1>¡Gana 10 millones de pesos en efectivo!</h1>
 
-    <p>
-      Esta es tu oportunidad para darte un respiro y recuperar esa platica que
-      se te escapó.
-    </p>
     <div class="container-section">
       <div class="container-ol">
         <span>Instrucciones como participar:</span>
         <ol>
           <li>
-            Selecciona un número de 2 ciras en la lista de cuadros verdes (solo
+            Selecciona un número de 2 cifras en la lista de cuadros verdes (solo
             seleccionar uno a la vez).
           </li>
           <li>
@@ -61,7 +57,22 @@
       id="mensaje-copiado"
       style="
         display: none;
-        background-color: #4caf50;
+        background-color: #7e1181;
+        color: white;
+        padding: 10px;
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+        z-index: 1000;
+      "
+    ></div>
+    <div
+      id="mensaje-seleccionado"
+      style="
+        display: none;
+        background-color: #7e1181;
         color: white;
         padding: 10px;
         position: fixed;
@@ -75,18 +86,10 @@
 
     <h3>
       La Rifa jugará con la loteria del
-      <strong>Sinuano - Noche el 29 de febrero de 2024 - </strong>
-      Responsables: Manuel Jimenez y Matthew Ruiz
+      <strong>Sinuano - Noche el 29 de febrero de 2024</strong>
     </h3>
 
     <h2 class="valor">Valor Rifa: $10.000</h2>
-
-    <div class="important-note">
-      <h5>
-        Nota importante: Si seleccionas dos botones verdes, el primero se
-        eliminará y se tendrá en cuenta el último.
-      </h5>
-    </div>
 
     <h3>Números Disponibles:</h3>
 
@@ -97,12 +100,39 @@
     <form id="formularioRifa">
       <div id="container">
         <label for="numeros">Agregar dos números adicionales:</label>
-        <input type="number" id="numeros" name="numeros" min="0" max="99" />
+        <input
+          type="number"
+          id="numeros"
+          name="numeros"
+          min="0"
+          max="99"
+          placeholder="Ej: 18"
+          required
+        />
       </div>
 
       <div id="container">
         <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" />
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Tu nombre aquí"
+          required
+        />
+      </div>
+
+      <div id="container">
+        <label for="nombre">Celular: (No se mostrará en pantalla)</label>
+        <input
+          type="number"
+          id="phone"
+          name="phone"
+          min="0"
+          pattern="[0-9]{10}"
+          placeholder="Ingresa tu número sin guiones ni espacios"
+          required
+        />
       </div>
       <!-- Agregar input para el nombre completo -->
 
@@ -111,13 +141,42 @@
     </form>
 
     <!-- Div para mostrar el resultado -->
+    <!-- Modificación en el HTML para agregar una tabla -->
     <div id="resultado"></div>
 
     <!-- Mensaje de error -->
     <div id="error-message"></div>
 
     <!-- Historial de participantes -->
-    <div id="historial"></div>
+    <!-- Modificación en el HTML para agregar una tabla al historial -->
+    <div id="historial">
+      <h2>Historial de Participantes</h2>
+      <table id="tablaHistorial">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Número</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán las filas de participantes -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="footer">
+      <p style="margin-top: 15px">
+        <strong>Responsables: Manuel Jimenez y Matthew Ruiz</strong>
+      </p>
+    </footer>
+
+    <!-- Agrega esto al final del cuerpo de tu HTML -->
+    <div id="whatsapp-container">
+      <a href="https://wa.link/gb9r96" target="_blank" id="whatsapp-link">
+        <img src="/img/wp.png" alt="Icono de WhatsApp" />
+      </a>
+      <p>Enviar captura de pago a WhatsApp</p>
+    </div>
 
     <script src="script.js"></script>
   </body>
