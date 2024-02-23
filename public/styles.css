@@ -147,7 +147,7 @@ h3 {
 #btnEnviar {
   height: 40px;
   width: 100%; /* Asegurar que ocupe el 100% del contenedor */
-  max-width: 280px; /* Limitar el ancho máximo */
+  max-width: 320px; /* Limitar el ancho máximo */
 }
 
 #whatsapp-container {
