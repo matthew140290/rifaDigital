@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="announcement">
+      <p class="scrolling-text">
+        ¡Los ganadores apareceran en esta sección, estar perdiente!
+      </p>
+    </div>
+
     <h2>Rifa Web</h2>
     <h1>¡Gana 10 millones de pesos en efectivo!</h1>
 
@@ -176,6 +182,20 @@
         <img src="/img/wp.png" alt="Icono de WhatsApp" />
       </a>
       <p>Enviar captura de pago a WhatsApp</p>
+    </div>
+
+    <!-- Agrega esto al final del cuerpo de tu HTML, justo antes del script.js -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h2>¡Información Importante!</h2>
+        <p>
+          A partir de hoy, solo jugarán los números que hayan sido cancelados.
+          Aún tienes oportunidad de participar, escoge tu número, paga y
+          envianos la captura en el icono de whatsapp. ¡No dejes perder esta
+          oportunidad!
+        </p>
+      </div>
     </div>
 
     <script src="script.js"></script>

@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
+  abrirModal();
   try {
     await obtenerEstadoDesdeServidor();
     await obtenerHistorialDesdeServidor();
@@ -51,6 +52,18 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("Error durante la inicialización:", error);
   }
 });
+
+// Función para abrir el modal
+function abrirModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "block";
+}
+
+// Función para cerrar el modal
+function cerrarModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "none";
+}
 
 async function obtenerBotonSeleccionado() {
   try {
